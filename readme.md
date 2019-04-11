@@ -1,1 +1,2 @@
 [![Build Status](https://travis-ci.org/soulshockers/chuck-norris-jokes.svg?branch=master)](https://travis-ci.org/soulshockers/chuck-norris-jokes)
+[![StyleCI](https://github.styleci.io/repos/180788405/shield?branch=master)](https://github.styleci.io/repos/180788405)
