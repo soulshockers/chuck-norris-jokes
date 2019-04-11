@@ -1,0 +1,28 @@
+{
+    "name": "soulshockers/chuck-norris-jokes",
+    "description": "Create random Chuck Norris jokes.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vasyl Sovyak",
+            "email": "soulshockers@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoulShockers\\ChuckNorrisJokes\\": "src/"
+        }
+    },
+    "autoload-dev":  {
+        "psr-4": {
+            "SoulShockers\\ChuckNorrisJokes\\Tests\\": "tests/"
+        }
+    }
+}
