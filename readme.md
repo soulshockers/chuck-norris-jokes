@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/soulshockers/chuck-norris-jokes.svg?branch=master)](https://travis-ci.org/soulshockers/chuck-norris-jokes)
