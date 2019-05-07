@@ -15,7 +15,8 @@
         "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.1"
+        "phpunit/phpunit": "^8.1",
+        "orchestra/testbench": "^3.5"
     },
     "autoload": {
         "psr-4": {
@@ -25,6 +26,16 @@
     "autoload-dev":  {
         "psr-4": {
             "SoulShockers\\ChuckNorrisJokes\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoulShockers\\ChuckNorrisJokes\\ChuckNorrisJokesServiceProvider"
+            ],
+            "aliases": {
+                "ChuckNorris": "SoulShockers\\ChuckNorrisJokes\\Facades\\ChuckNorris"
+            }
         }
     }
 }
