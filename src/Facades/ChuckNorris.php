@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SoulShockers\ChuckNorrisJokes\Facades;
 
 use Illuminate\Support\Facades\Facade;
