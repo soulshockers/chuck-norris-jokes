@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SoulShockers\ChuckNorrisJokes;
 
 use Illuminate\Support\ServiceProvider;
