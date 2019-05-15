@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SoulShockers\ChuckNorrisJokes\Console;
 
 use Illuminate\Console\Command;
