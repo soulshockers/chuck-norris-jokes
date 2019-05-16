@@ -40,7 +40,6 @@ class LaravelTest extends TestCase
         $this->assertSame('some joke'.PHP_EOL, $output);
     }
 
-
     /** @test */
     public function the_route_can_be_accessed()
     {
