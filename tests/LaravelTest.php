@@ -2,11 +2,11 @@
 
 namespace SoulShockers\ChuckNorrisJokes\Tests;
 
-use Illuminate\Support\Facades\Artisan;
 use Orchestra\Testbench\TestCase;
-use SoulShockers\ChuckNorrisJokes\ChuckNorrisJokesServiceProvider;
-use SoulShockers\ChuckNorrisJokes\Console\ChuckNorrisJoke;
+use Illuminate\Support\Facades\Artisan;
 use SoulShockers\ChuckNorrisJokes\Facades\ChuckNorris;
+use SoulShockers\ChuckNorrisJokes\Console\ChuckNorrisJoke;
+use SoulShockers\ChuckNorrisJokes\ChuckNorrisJokesServiceProvider;
 
 class LaravelTest extends TestCase
 {
@@ -37,8 +37,9 @@ class LaravelTest extends TestCase
 
         $output = Artisan::output();
 
-        $this->assertSame('some joke' . PHP_EOL, $output);
+        $this->assertSame('some joke'.PHP_EOL, $output);
     }
+
 
     /** @test */
     public function the_route_can_be_accessed()
