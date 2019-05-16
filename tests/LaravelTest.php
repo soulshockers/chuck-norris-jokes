@@ -23,8 +23,7 @@ class LaravelTest extends TestCase
             'ChuckNorris' => ChuckNorrisJoke::class,
         ];
     }
-
-
+    
     /** @test */
     public function the_console_command_returns_a_joke()
     {
