@@ -24,6 +24,7 @@ class LaravelTest extends TestCase
         ];
     }
 
+
     /** @test */
     public function the_console_command_returns_a_joke()
     {
