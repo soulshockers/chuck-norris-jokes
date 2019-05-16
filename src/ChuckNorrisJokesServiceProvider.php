@@ -9,7 +9,10 @@ use SoulShockers\ChuckNorrisJokes\Http\Controllers\ChuckNorrisController;
 
 class ChuckNorrisJokesServiceProvider extends ServiceProvider
 {
-    public function boot()
+    /**
+     * @return void
+     */
+    public function boot(): void
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -20,7 +23,10 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
         Route::get('chuck-norris', ChuckNorrisController::class);
     }
 
-    public function register()
+    /**
+     * @return void
+     */
+    public function register(): void
     {
         $this->app->bind('chuck-norris', function () {
             return new JokeFactory();

@@ -6,7 +6,10 @@ use SoulShockers\ChuckNorrisJokes\Facades\ChuckNorris;
 
 class ChuckNorrisController
 {
-    public function __invoke()
+    /**
+     * @return string
+     */
+    public function __invoke(): string
     {
         return ChuckNorris::getRandomJoke();
     }

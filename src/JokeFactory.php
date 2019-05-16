@@ -26,7 +26,7 @@ class JokeFactory
     /**
      * @return string
      */
-    public function getRandomJoke() : string
+    public function getRandomJoke(): string
     {
         $response = $this->client->get(self::API_ENDPOINT);
 
