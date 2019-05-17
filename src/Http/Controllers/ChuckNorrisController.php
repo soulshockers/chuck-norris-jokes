@@ -13,7 +13,7 @@ class ChuckNorrisController
     public function __invoke(): View
     {
         return view('chuck-norris::joke', [
-            'joke' => ChuckNorris::getRandomJoke()
+            'joke' => ChuckNorris::getRandomJoke(),
         ]);
     }
 }
