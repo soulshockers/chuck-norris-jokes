@@ -24,9 +24,13 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/chuck-norris'),
-        ]);
+        ], 'views');
 
-        Route::get('chuck-norris', ChuckNorrisController::class);
+        $this->publishes([
+            __DIR__.'/../config/chuck-norris.php' => config_path('chuck-norris.php'),
+        ], 'config');
+
+        Route::get(config('chuck-norris.route'), ChuckNorrisController::class);
     }
 
     /**
@@ -37,5 +41,7 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
         $this->app->bind('chuck-norris', function () {
             return new JokeFactory();
         });
+
+        $this->mergeConfigFrom(__DIR__.'/../config/chuck-norris.php', 'chuck-norris');
     }
 }
