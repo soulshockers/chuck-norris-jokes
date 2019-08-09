@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Artisan;
 use SoulShockers\ChuckNorrisJokes\Facades\ChuckNorris;
 use SoulShockers\ChuckNorrisJokes\Console\ChuckNorrisJoke;
 use SoulShockers\ChuckNorrisJokes\ChuckNorrisJokesServiceProvider;
+use SoulShockers\ChuckNorrisJokes\Models\Joke;
 
 class LaravelTest extends TestCase
 {
@@ -39,11 +40,30 @@ class LaravelTest extends TestCase
             ->assertStatus(200);
     }
 
+    /** @test */
+    public function it_can_access_the_database()
+    {
+        $joke = new Joke();
+        $joke->joke = 'this is funny';
+        $joke->save();
+
+        $newJoke = Joke::find($joke->id);
+
+        $this->assertSame($newJoke->joke, 'this is funny');
+    }
+
     protected function getPackageProviders($app)
     {
         return [
             ChuckNorrisJokesServiceProvider::class,
         ];
+    }
+
+    protected function getEnvironmentSetUp($app)
+    {
+        include_once __DIR__ . '/../database/migrations/create_jokes_table.php.stub';
+
+        (new \CreateJokesTable)->up();
     }
 
     protected function getPackageAliases($app)
