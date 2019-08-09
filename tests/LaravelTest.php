@@ -4,10 +4,10 @@ namespace SoulShockers\ChuckNorrisJokes\Tests;
 
 use Orchestra\Testbench\TestCase;
 use Illuminate\Support\Facades\Artisan;
+use SoulShockers\ChuckNorrisJokes\Models\Joke;
 use SoulShockers\ChuckNorrisJokes\Facades\ChuckNorris;
 use SoulShockers\ChuckNorrisJokes\Console\ChuckNorrisJoke;
 use SoulShockers\ChuckNorrisJokes\ChuckNorrisJokesServiceProvider;
-use SoulShockers\ChuckNorrisJokes\Models\Joke;
 
 class LaravelTest extends TestCase
 {
@@ -61,7 +61,7 @@ class LaravelTest extends TestCase
 
     protected function getEnvironmentSetUp($app)
     {
-        include_once __DIR__ . '/../database/migrations/create_jokes_table.php.stub';
+        include_once __DIR__.'/../database/migrations/create_jokes_table.php.stub';
 
         (new \CreateJokesTable)->up();
     }
